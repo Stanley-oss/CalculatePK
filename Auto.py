@@ -14,6 +14,7 @@ WINDOW_POSITION_OFFSET_X = 10
 WINDOW_POSITION_OFFSET_Y = 45
 
 MOVE_DURATION = 0.05
+WAIT_DURATION = 1.2
 
 def draw_number(num, x, y):
     digits = []
@@ -78,7 +79,7 @@ def main():
     for i in list:
         draw_number(i, canvas_x, canvas_y)
         pyautogui.press('enter')
-        time.sleep(1.2)
+        time.sleep(WAIT_DURATION)
     
     pyautogui.moveTo(start_button_x, start_button_y, duration=MOVE_DURATION)
     time.sleep(1)
